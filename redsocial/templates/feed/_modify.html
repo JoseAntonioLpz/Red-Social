@@ -1,0 +1,23 @@
+<section class="flex">
+    <div class="login flex frow wrap">
+    <form class="menosPD" action="perfil/updateProfile" method="post" enctype="multipart/form-data">
+        <h1>Modificar Perfil</h1>
+        <input type="text" name="name" value="{{name}}"/><br>
+        <input type="text" name="surname" value="{{surname}}"/><br>
+        <input type="date" name="birthday" value="{{birthday}}"/><br>
+        <select name="sex">
+            <option>Hombre</option>
+            <option>Mujer</option>
+            <option>Otros</option>
+        </select><br>
+        <input type="submit" value="Submit"/>
+    </form>
+    <form class="mobileNP" action="perfil/updateImage" method="post" enctype="multipart/form-data">
+        <h1 class="m20">Cambiar Imagen de perfil</h1>
+        <input type="file" id="foto" name="foto"/>
+        <label for="foto"><i class="fas fa-camera"></i> Examinar</label><br>
+        <input type="submit" value="Submit"/>
+    </form>
+    {{mensaje}}
+    </div>
+</section>

@@ -1,0 +1,16 @@
+<section class="flex">
+    <div class="login">
+        <form action="user/adduser" method="post" id="register">
+            <h1>Registro</h1>
+            <input type="text" name="user" id="user" placeholder="Nombre de usuario"/><br>
+            <input type="text" name="email" placeholder="Email"/><br>
+            <input type="password" name="password" placeholder="Password"/><br>
+            <input type="password" name="passRep" placeholder="Password 2"/><br>
+            <div class="g-recaptcha" data-sitekey="6Lc7lVEUAAAAAP-PXBMaicT6NxaYNFDaTCjgW6BP"></div><br>
+            <input type="submit" value="Submit"/>
+        </form>
+    </div>
+</section>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script type="text/javascript" src="js/ajax/comprobateUser.js"></script>
+<script type="text/javascript" src="js/validate/validateRegister.js"></script>

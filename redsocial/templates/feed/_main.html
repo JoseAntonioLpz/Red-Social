@@ -1,0 +1,65 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="info">
+                    <div>
+                        <img src="perfil/viewPhoto" />
+                    </div>
+                    <div>
+                        <a href="perfil/profileTemplate?id={{id}}">{{name}} {{surname}}</a>
+                    </div>
+                    <br>
+                    <div class="number">
+                        <div id="Nseguidores">{{seguidores}}</div>
+                        <div id="Nseguidos">{{seguidos}}</div>
+                        <div id="Nposts">{{posts}}</div>
+                    </div>
+                </div>
+                <hr>
+                <div class="propuestos">
+                    <h2 class="sh2 h2prop">Descubre</h2>
+                    {{propuestos}}
+                </div>
+            </div>
+            <div class="col-md-3 onlyMobile">
+                <h2 class="sh2">¡Encuentra lo que buscas!</h2>
+                <form class="search" action="perfil/search" method="post">
+                    <input type="text" name="search" placeholder="Buscar"/>
+                    <button type="submit" value="Submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div class="buttonAddPost onlyMobile">
+                    <input type="hidden" id="em" value="false"/>
+                    <span id="add"><i class="fas fa-pencil-alt"></i></span>
+                </div>
+                <div class="cardPostForm">
+                    <h2>Cuentanos que esta pasando</h2>
+                    <form class="formPost" id="post" method="post" action="" enctype='multipart/form-data'>
+                        <textarea id="texto" rows="4" cols="50" placeholder="¡Expresate aqui!"></textarea> 
+                        <input type="file" id="media" name="media" class="inputFile"/>
+                        <label for="media"><i class="fas fa-camera"></i></label>
+                        <button type="submit" id="salvando"/>Go!</button>
+                    </form>
+                </div>
+                <div id="posts"></div>
+            </div>
+            <div class="col-md-3 onlyPc">
+                <h2 class="sh2">¡Encuentra lo que buscas!</h2>
+                <form class="search" action="perfil/search" method="post">
+                    <input type="text" name="search" placeholder="Buscar"/>
+                    <button type="submit" value="Submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<input type="hidden" value="1" id="page">
+<input type="hidden" value="true" id="bool">
+<script type="text/javascript" src="js/ajax/savePost.js"></script>
+<script type="text/javascript" src="js/ajax/obtainPost.js"></script>
+<script type="text/javascript" src="js/ajax/like.js"></script>
+<script type="text/javascript" src="js/ajax/comment.js"></script>
+<script type="text/javascript" src="js/animation/emerger.js"></script>
+<!--<script type="text/javascript" src="js/ajax/more.js"></script>-->

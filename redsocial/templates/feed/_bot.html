@@ -1,0 +1,42 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="info">
+                    <div>
+                        <img src="perfil/viewPhoto" />
+                    </div>
+                    <div>
+                        <a href="perfil/profileTemplate?id={{id}}">{{name}} {{surname}}</a>
+                    </div>
+                    <br>
+                    <div class="number">
+                        <div id="Nseguidores">{{seguidores}}</div>
+                        <div id="Nseguidos">{{seguidos}}</div>
+                        <div id="Nposts">{{posts}}</div>
+                    </div>
+                </div>
+                <hr>
+                <div class="propuestos onlyPc">
+                    <h2 class="sh2 h2prop">Descubre</h2>
+                    {{propuestos}}
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div id="respuestas" class="respuestas"></div>
+                <div class="formBot">
+                    <input type="text" id="question" placeholder="Preguntar"/>
+                    <button id="qBot">Preguntar</button>
+                </div>
+                <div class="botones">
+                    <a data-quest='Hola'>Hola</a>
+                    <a data-quest='Denunciar'>Denunciar</a>
+                    <a data-quest='Ayuda'>Ayuda</a>
+                    <a class="onlyPc" data-quest='Chiste'>Chiste</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript" src="js/ajax/bot.js"></script>

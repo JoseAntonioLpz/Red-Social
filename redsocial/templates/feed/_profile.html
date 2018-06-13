@@ -1,0 +1,51 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="info">
+                    <div>
+                        <img src="perfil/viewPhotoOtherProfiles?id={{id}}" />
+                    </div>
+                    <div>
+                        Perfil de: {{name}} {{surname}}
+                        <br>
+                        Usuario: {{user}}
+                    </div>
+                    <br>
+                    <div class="number">
+                        <div id="Nseguidores">{{seguidores}}</div>
+                        <div id="Nseguidos">{{seguidos}}</div>
+                        <div id="Nposts">{{posts}}</div>
+                    </div>
+                </div>
+                <hr>
+                <span id="peles">{{follow}}</span>
+                <span id="block">{{block}}</span>
+                 {{modificar}}
+            </div>
+            <div class="col-md-3 onlyMobile">
+                <h2 class="sh2">¡Encuentra lo que buscas!</h2>
+                <form class="search" action="perfil/search" method="post">
+                    <input type="text" name="search" placeholder="Buscar"/>
+                    <button type="submit" value="Submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div id="posts"></div>
+                <input type="hidden" id="idPerfil" value="{{id}}" />
+            </div>
+            <div class="col-md-3 onlyPc">
+                <h2 class="sh2">¡Encuentra lo que buscas!</h2>
+                <form class="search" action="perfil/search" method="post">
+                    <input type="text" name="search" placeholder="Buscar"/>
+                    <button type="submit" value="Submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="js/ajax/follow.js"></script>
+<script type="text/javascript" src="js/ajax/block.js"></script>
+<script type="text/javascript" src="js/ajax/obtainSinglePost.js"></script>
+<script type="text/javascript" src="js/ajax/like.js"></script>
+<script type="text/javascript" src="js/ajax/comment.js"></script>
