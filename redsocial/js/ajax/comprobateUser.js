@@ -11,9 +11,11 @@ $(document).ready(function(){
             }
         }).done(function(json){
             if(json.data > 0){
-                alert ('El nombre de usuario ya existe');
+                $('#user').removeClass('verde');
+                $('#user').addClass('rojo');
             }else{
-                alert ('Nombre disponible');
+                $('#user').removeClass('rojo');
+                $('#user').addClass('verde');
             }
         }).fail(function(){
             console.log('La llamada Ajax ha fallado');

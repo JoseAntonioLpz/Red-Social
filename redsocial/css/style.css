@@ -203,6 +203,7 @@ footer{
     height: auto;
     text-align: center;
     margin-top: 20px;
+    position: relative;
 }
 
 .info > div{
@@ -846,10 +847,32 @@ textarea{
     background-color: #ffe77f;
 }
 
+.verificado{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: url('../images/verified.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+}
+
 .desplegable{
     display: none;
 }
 
+.verde{
+    color:green;
+    border-color:green !important;
+}
+
+.rojo{
+    color:red;
+    border-color:red !important;
+}
 
 @media (max-width: 768px) {
     

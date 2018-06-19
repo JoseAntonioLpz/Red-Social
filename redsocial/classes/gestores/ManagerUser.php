@@ -204,6 +204,21 @@ class ManagerUser implements Manager{
         return $id;
     }
     
+    function getVerifyByIdPerfil($id){
+        $sql = 'select u.verify from user u join perfil p on u.id = p.idUsuario where p.id = :id';
+        
+        $params = array(
+            'id' => $id    
+        );
+        
+        $res = $this->db->execute($sql, $params);
+        $statement = $this->db->getStatement();
+        
+        $id = ($res) ? $statement->fetch()[0] : 0;
+        
+        return $id;
+    }
+    
     function getUserNameByIdPerfil($id){
         $sql = 'select u.user from user u join perfil p on u.id = p.idUsuario where p.id = :id';
         

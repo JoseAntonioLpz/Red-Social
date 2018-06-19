@@ -46,6 +46,11 @@ class ModeloPerfil extends Modelo{
         return $gestor->getIdUserByIdPerfil($id);
     }
     
+    function getVerifyByIdPerfil($id){
+        $gestor = new ManagerUser($this->dataBase);
+        return $gestor->getVerifyByIdPerfil($id);
+    }
+    
     function search($id, $search){
         return $this->gestor->search($id, $search);
     }

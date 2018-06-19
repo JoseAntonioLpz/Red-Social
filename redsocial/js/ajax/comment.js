@@ -3,13 +3,15 @@ $(document).ready(function(){
    $('#posts').on('submit' , '.commentForm' , function (e){
        e.preventDefault();
        var comentplace = $(this).parent().parent().children('div:nth-child(4)');
+       
+       var texto = $(this).children('.texto').val().replace(/<[^>]*>?/g, '');
         $.ajax({
             url: 'comment/comment',
             method: 'post',
             dataType: 'json',
             data:{
                 idPost: $(this).children('.id').val(),
-                texto: $(this).children('.texto').val()
+                texto: texto
             }
         }).done(function(json){
             console.log(json.data);
@@ -23,7 +25,7 @@ $(document).ready(function(){
         }).fail(function(){
            console.log('Error en ajax'); 
         }).always(function(){
-            $(this).children('.texto').val('')
+            $('.commentForm').children('.texto').val('')
         });       
    });
    

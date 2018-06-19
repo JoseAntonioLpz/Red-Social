@@ -5,7 +5,7 @@ $(document).ready(function(){
         
         var form = $(this);
 
-        var texto = $("#texto").val();
+        var texto = $("#texto").val().replace(/<[^>]*>?/g, '');
         var media = $('#media');   
         var archivo = media[0].files;
         $('.confirm').css('display', 'block');

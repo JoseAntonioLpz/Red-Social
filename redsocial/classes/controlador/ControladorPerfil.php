@@ -128,8 +128,10 @@ class ControladorPerfil extends Controlador{
             $this->getModel()->setDato('seguidos', $ms->countFollow($perfil->getId()));
             $this->getModel()->setDato('posts' , $mp->countPost($perfil->getId()));
             $this->getModel()->setDato('user' , $mu->getUserNameByIdPerfil($perfil->getId()));
-            
             $this->getModel()->setDato('archivo', 'feed/_profile.html');
+            if($this->getModel()->getVerifyByIdPerfil($id) === '1'){
+                $this->getModel()->setDato('verify', '<div class="verificado"></div>');
+            }
             if($this->isMyProfile($id) && $this->getPerfil()->getId() === $id){
                 $this->getModel()->setDato('modificar', '<a class="modify" href="perfil/modificar">Modificar Perfil</a>');
             }else{
